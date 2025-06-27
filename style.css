@@ -1,0 +1,161 @@
+:root {
+  --verde-john-deere: #367C2B;
+  --verde-limao: #D4FF00;
+  --alabaster: #FAFAFA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--alabaster);
+  color: #333;
+}
+
+header {
+  background-color: var(--verde-john-deere);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+header img {
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 28px;
+  border: none;
+}
+
+.banner {
+  background-color: var(--verde-limao);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3em;
+  color: var(--verde-john-deere);
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  color: var(--verde-john-deere);
+  margin-bottom: 20px;
+}
+
+.servicos ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.servicos li {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: var(--verde-john-deere);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2e6b23;
+}
+
+footer {
+  background-color: var(--verde-john-deere);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--verde-john-deere);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
