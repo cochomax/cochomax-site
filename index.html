@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cochomax</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <img src="Vertical Colorido.jpg" alt="Cochomax Logo">
+    <img src="Vertical Colorido.png" alt="Cochomax Logo" />
     <nav id="menu">
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -20,7 +20,7 @@
 
   <div class="banner">
     <h1>Bem-vindo à Cochomax</h1>
-    <p>Excelência em produtos de aço para seu confinamento</p>
+    <p>Excelência em produtos de aço para seu confinamento.</p>
   </div>
 
   <section id="sobre">
@@ -30,21 +30,33 @@
 
   <section id="servicos" class="servicos">
     <h2>Serviços</h2>
-    <ul>
-      <li>Equipamentos para confinamento</li>
-      <li>Silo cocho</li>
-      <li>Bebedouro d'água</li>
-    </ul>
+    <div class="cards">
+      <div class="card">
+        <img src="icons/icone-confinamento.svg" alt="Confinamento">
+        <h3>Equipamentos para Confinamento</h3>
+        <p>Soluções robustas para garantir eficiência no manejo diário.</p>
+      </div>
+      <div class="card">
+        <img src="icons/icone-silo.svg" alt="Silo Cocho">
+        <h3>Silo Cocho</h3>
+        <p>Estrutura resistente para armazenagem e distribuição de ração.</p>
+      </div>
+      <div class="card">
+        <img src="icons/icone-bebedouro.svg" alt="Bebedouro">
+        <h3>Bebedouro d'água</h3>
+        <p>Abastecimento contínuo com higiene e durabilidade no campo.</p>
+      </div>
+    </div>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
     <form action="mailto:contato@cochomax.com.br" method="POST" enctype="text/plain">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nome" name="nome" required />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required />
 
       <label for="mensagem">Mensagem:</label>
       <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
@@ -54,17 +66,33 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Cochomax. Todos os direitos reservados.</p>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Cochomax</h3>
+        <p>Excelência em produtos de aço para seu confinamento.</p>
+        <p>📍 Rua Exemplo, 123 – Cidade, Estado</p>
+        <p>📞 (44) 98427-6805</p>
+        <p>✉ contato@cochomax.com.br</p>
+      </div>
+      <div class="footer-social">
+        <h4>Redes Sociais</h4>
+        <a href="https://wa.me/5544984276805" target="_blank">WhatsApp</a><br />
+        <a href="https://www.instagram.com" target="_blank">Instagram</a><br />
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Cochomax. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <a class="whatsapp-btn" href="https://wa.me/5544984276805" target="_blank" title="Fale conosco no WhatsApp">
-    🖊
+    🟢
   </a>
 
   <script>
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
